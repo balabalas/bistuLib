@@ -7,6 +7,7 @@ var express = require('express')
   , routes = require('./routes')
   , bistu = require('./lib/bistu')
   , search = require('./routes/search')
+  , book = require('./routes/book')
   , notfind = require('./routes/notfind')
   , http = require('http')
   , path = require('path');
@@ -35,6 +36,8 @@ if ('development' == app.get('env')) {
 app.get('/', routes.index);
 
 app.get('/search', search.query);
+
+app.get('/book', book.query);
 
 app.get('*', notfind.index);
 

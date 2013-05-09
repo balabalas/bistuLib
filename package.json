@@ -1,7 +1,11 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "BistuLibraryAPI",
+  "version": "0.1.0",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/xionglun/bistuLib.git"
+  },
   "scripts": {
     "start": "node app.js",
     "test": "grunt hint --verbose"

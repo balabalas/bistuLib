@@ -28,10 +28,10 @@ exports.query = function(req, res){
   var handleAction = function(results){
       var data = null;
       if(typeof results === 'object'){
-          data = JSON.stringify(results);
+        data = JSON.stringify(results);
       }
       else {
-          data = results;
+        data = results;
       }
       res.send(data);
       res.end();
