@@ -6,20 +6,23 @@
 var search = require('../lib/search');
 
 function parseArg(args){
-    var res = {};
-    /**
-     * TODO: detect different params.
-     * **/
+    var res = {}
+      , key = args.key || ''
+      , match = args.match || 'qx';
     
-    res.word = args;
+    /*
+     * query params should like this:
+     *   search?key=node&match=qx&p=all
+     * **/
+    res.word = key;
+    res.match = match;
     
     return res;
-    
 }
 
 exports.query = function(req, res){
   
-  var params = req.params.book
+  var params = req.query
     , args = null;
   
   var handleAction = function(results){
