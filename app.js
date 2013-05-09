@@ -6,6 +6,8 @@
 var express = require('express')
   , routes = require('./routes')
   , bistu = require('./lib/bistu')
+  , search = require('./routes/search')
+  , notfind = require('./routes/notfind')
   , http = require('http')
   , path = require('path');
 
@@ -19,8 +21,10 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(app.router);
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(app.router);
+
+// init global settings.
 bistu.init();
 
 // development only
@@ -29,6 +33,10 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', routes.index);
+
+app.get('/search/:book', search.query);
+
+app.get('*', notfind.index);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('BistuLib listening on port ' + app.get('port'));

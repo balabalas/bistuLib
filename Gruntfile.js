@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         jshint: {
             lib: {
-                src: ['./lib/*.js','!./lib/jquery.js'],
+                src: ['./lib/*.js', './routes/*.js','!./lib/jquery.js'],
                 options: {
                     laxcomma: true
                     , debug: true
