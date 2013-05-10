@@ -17,48 +17,6 @@
 
 <title>书刊相关信息</title>
 <link rel="stylesheet" type="text/css" href="../include/styles.css">
-
-
-<script language="JavaScript">
-<!--
-function popup(link,type){
-	var href;
-	if (typeof(link) == 'string')
-		href = link;
-	else
-		href = link.href;
-		
-	if(type == 1)
-	{
-		href = href + "&id=01h0173359";
-		window.location=href;
-	}
-	if(type==2)
-		window.open(href,'win_card', 'width=600,height=300,resizable=yes,scrollbars=yes');
-	if(type == 3)
-		window.open(href,'hold', 'width=650,height=400,resizable=yes,scrollbars=yes');
-}
-function popup2(link,id) {//弹出书目详细信息窗口
-	var href;
-	if (typeof(link) == 'string')
-	   href=link;
-	else
-	   href=link.href;
-	href = href + "?rec_ctrl_id=" +id;
-	window.open(href,id,'width=800,height=480,top=20,left=20,resizable=yes,scrollbars=yes,alwaysRaised=yes');
-}
-
-function card(){
-	frmCard.submit();
-}
-function showrecord(){
-	var record;
-	document.all.record.style.display = "block";
-}
-//-->
-</script>
-<script type="text/javascript" src="http://www.metacd.com/jquery/jquery.js"></script>
-<script type="text/javascript" src="http://www.metacd.com/jquery/011056.js"></script>
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <tr><td>
     <table width="100%" height="20" border="0" cellpadding="0" cellspacing="0" bgcolor="#EFEBEF">
@@ -136,6 +94,18 @@ function showrecord(){
 		><td align=right class=opac_blue width=20% >主题&nbsp;:&nbsp;</td><td width=80% ><a href="queryOut.jsp?type=subject_term&word=Web 服务器" target=_blank>Web 服务器</a> <a href="queryOut.jsp?type=subject_term&word= --程序设计" target=_blank> --程序设计</a></td></tr>
 
 </table>
+
+
+
+
+
+
+
+
+
+
+
+
   
    <p align="center">
    <div style="font-size:14px;">
@@ -144,13 +114,8 @@ function showrecord(){
    </div>
    </p>
         <table border=0 cellPadding=0 cellSpacing=0 width="97%">
-          <tr><td height="1" background="../images/doc_01.gif"></td></tr>
-          <tr><td bgcolor="#EBF0F2" class="opac_blue" height="18" align="center">:: 馆内流通信息 ::
-		    -  
-		   <!--//   20100617 ywb 增加 end-->
-		  </td></tr>
-          <tr><td height="1" background="../images/doc_01.gif"></td></tr>
         </table>
+        
         <table border=0 cellPadding=2 cellSpacing=1 width="97%">
 
     			<tr align=center valign="baseline" bgcolor="#6D849B">
@@ -198,15 +163,7 @@ function showrecord(){
        				</tr>  
 
       					<tr>
-      				
-      				<!--//20091215 ywb 修改，如果典藏部门代码不是1（健翔桥书库）那么用其他颜色显示-->
-      				<!--清河校区书库代码1，如果是清河，也用不同颜色显示-->
-					<!--//20100331 ywb 更新，设置，除了《在架可借》之外，其余整行显示颜色为灰色，其他状态遵从20091215设置
-					can_borrow = 1为在架可借
-					//20100407 ywb 更新,库本图书,改用兰色显示
-					-->
-      				
-      				<!--20100331 ywb 设置下面颜色代码  if(can_borrow!=1)out.println("style=\""+ colorSet +"\""); -->
+
         				<td align=center><font style="color:#D1D1D1"
 >2</font></td>
         				<td><font style="color:#D1D1D1"
@@ -316,44 +273,5 @@ function showrecord(){
        					<td colspan=9 height=1 background=\"../images/doc_01.gif\"></td>
        				</tr>  
 
-
-	
-<br>
-<table border=0 cellPadding=0 cellSpacing=0 width="97%">
-	<tr><td height="1" background="../images/doc_01.gif"></td></tr>
-	<tr><td bgcolor="#EBF0F2" class="opac_blue" height="18" align="center">:: 关联记录 ::</td></tr>
-	<tr><td height="1" background="../images/doc_01.gif"></td></tr>
-</table>
-<table border=0 cellPadding=2 cellSpacing=1 width="97%">          
-<tr><td>
-<ul><li>无相关关联信息！</li></ul>
-</td></tr>
-
-       
-        </table>
-        <br>
-<!--****************2005-15-2 宋坤亮添加书的其它电子资源*************************************-->
-        <table border=0 cellPadding=0 cellSpacing=0 width="97%">
-          <tr><td height="1" background="../images/doc_01.gif"></td></tr>
-          <tr><td bgcolor="#EBF0F2" class="opac_blue" height="18" align="center">:: 其它电子资源数据 ::</td></tr>
-          <tr><td height="1" background="../images/doc_01.gif"></td></tr>
-        </table>
-        <table border=0 cellPadding=2 cellSpacing=1 width="97%">
-          <tr><td><ul>
-<li>该图书暂无其它电子资源数据！</li>
-
-
-          </ul></td></tr>
-          <tr><td height="1" background="../images/doc_01.gif"></td></tr>
-        </table>
-
-        <p><a href="javascript:window.close()"><img src="../images/closewin.gif" border="0"></a></p>
-
-        </td>
-        <td width="1" bgcolor="#426994"><img src="../images/space.gif" width="1" height="1"></td>
-      </tr>
-    </table>
-  </td></tr>
-</table>
 
 
