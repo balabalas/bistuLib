@@ -14,7 +14,7 @@ var http = require('http')
     , options = {
         hostname:'211.68.37.131'
         , port: 80
-        , path: '/book/search.jsp?' + params
+        , path: '/book/detailBook.jsp?rec_ctrl_id=01h0173359'
         , method: 'GET'
         , header: {"charset":"GBK"}
     };
@@ -31,7 +31,7 @@ var req = http.request(options, function(res){
     //var cd = iconv.decode(d, 'GBK');
     res.on('end', function(){
 
-        fs.writeFile('search.html', d, function(err){
+        fs.writeFile('info.html', d, function(err){
             if(err) console.log(err);
             else console.log("done");
         });

@@ -1,0 +1,203 @@
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+<link href="../include/styles.css" rel="stylesheet" type="text/css"> 
+<SCRIPT language=JavaScript1.1 src="../include/queryout.js"></SCRIPT>
+<body bgcolor="#F7FBFF" leftmargin="0" topmargin="0" >  
+<form name=frm  method=post>
+<input type=hidden name=word value='node'>
+<input type=hidden name=type value='title'>
+<input type=hidden name=cmatch value='qx'>
+<input type=hidden name=recordtype value='all'>
+<input type=hidden name=library_id value='all'>
+<input type=hidden name=kind value=simple>
+<input type=hidden name=searchtimes value=1>
+<input type=hidden name=size value=500>
+<input type=hidden name=curpage value=1>
+<input type=hidden name=orderby value=pubdate_date>
+<input type=hidden name=ordersc value=desc>
+
+<table width="100%" height="300" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+	<td height="100%">
+	  <table width="100%" height="20" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		  <td width="1" bgcolor="#636563"></td>
+		  <td width="45" align="right" background="../images/middle_04.gif">
+			<img src="../images/biao_arrow.gif" width="18" height="16">&nbsp;</td>
+		  <td width="90" valign="baseline" background="../images/middle_04.gif" class="big"><span class="opac_black">书刊检索</span></td>
+		  <td width="23"><img src="../images/middle_05.gif" width="23" height="20"></td>
+		  <td valign="bottom" background="../images/middle_06.gif">
+			<table height="16" border="0" cellpadding="0" cellspacing="0">
+			  <tr>
+				  <td valign="baseline" width="200" background="../images/middle_07.gif">
+					&nbsp;&nbsp;<img src="../images/biao_doc_blue.gif" width="7" height="7">
+					<span class="opac_blue">检索结果</span> ——
+					共 <span class="opac_red">4</span> 条&nbsp;&nbsp;</td>
+				<td width="2"><img src="../images/middle_08.gif" width="2" height="15"></td>
+
+				<td width="1"><img src="../images/middle_09.gif" width="1" height="16"></td>
+				<td width="90" align="center" valign="baseline" background="../images/middle_10.gif"> 
+					<img src="../images/biao_doc_black.gif" width="7" height="7"> 
+					<a class="opac_black" href="queryIn.jsp?kind=simple">简单检索</a></td>
+				<td width="2"><img src="../images/middle_11.gif" width="2" height="16"></td>
+
+		  </tr>
+			</table></td>
+		  <td width="73" background="../images/top_bg_03.gif" bgcolor="#426994">&nbsp;</td>
+		</tr>
+	  </table>
+	  <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#F7FBFF">
+		<tr>
+		  <td align="center" valign="top">
+			<table border=0 cellPadding=0 cellSpacing=0 width="100%">
+			  <tr><td colspan="4" height="1"><img src="../images/space.gif" width="779" height="1"></td></tr>
+			  <tr>
+			    <td width="1%"></td>
+				<td width="89%"><p>简单检索：所有题名：<b>node</b>，前向匹配；资料类型：全部</p></td>
+			  </tr>
+	        </table>
+
+
+	<table border=0  cellPadding=0 cellSpacing=0 width="97%" align=center>
+	  <tr><td colspan=3 align=right height="1" background="../images/doc_01.gif"></td></tr>
+	  <tr>
+		<td>:: 当前第<span class="opac_red"> <b>1</b> </span>页/共<span class="opac_red"> <b>1</b> </span>页</td>
+		<td>
+		
+		每页 <select onChange="javascript:sizechange(pagesize)" name=pagesize size=1 style="width:60">
+
+		</select> 条记录&nbsp;&nbsp;&nbsp;&nbsp;
+		
+		</td>
+
+	  </tr>
+	  <tr><td colspan=2 align=right height="1" background="../images/doc_01.gif"></td></tr>
+	</table>		
+
+
+		<table Width=97% border=0 cellpadding=2 cellspacing=1>
+			<tr align=center valign="baseline" bgcolor="#6D849B">
+				<td class=opac_white width=5% noWrap>序号</td>
+			<!--20091207屏蔽索书号-->
+<td class=opac_white width=30% noWrap >
+<a class=opac_white1 href=javascript:orderby('title',1)>题名(详细信息)</a></td>
+<td class=opac_white width=20% noWrap>
+<a class=opac_white1 href=javascript:orderby('authors',1)>责任者</a></td>
+<td class=opac_white width=18% noWrap>
+<a class=opac_white1 href=javascript:orderby('publisher',1)>出版社</a></td>
+<td class=opac_white width=15% noWrap>
+<a class=opac_white1 href=javascript:orderby('isn',1)>标准号</a></td>
+<td class=opac_white width=5% noWrap>
+出版年&nbsp;&nbsp;<a class=opac_white1 href=javascript:orderby('asc',2)>正序</a>
+</td></tr>
+
+			  <tr >			    
+				  <td align=center>1&nbsp;</td>
+				  <!--20091207屏蔽索书号-->
+				  <!--<td><a href="javascript:popup('detailBook.jsp','01h0180547')" class=opac_blue> </a></td>-->
+				  <td><a href="javascript:popup('detailBook.jsp','01h0180547')" class=opac_blue> Node.js开发指南</a></td>
+
+				  <td>BYVoid编著&nbsp;</td>
+				  <td>人民邮电出版社&nbsp;</td>
+				  <td>978-7-115-28399-3&nbsp;</td>
+				  <td>无&nbsp;</td>	  
+				  
+			  </tr>
+
+			  <tr bgcolor=#EBF0F2>			    
+				  <td align=center>2&nbsp;</td>
+				  <!--20091207屏蔽索书号-->
+				  <!--<td><a href="javascript:popup('detailBook.jsp','01h0173359')" class=opac_blue> TP393.09/3116</a></td>-->
+				  <td><a href="javascript:popup('detailBook.jsp','01h0173359')" class=opac_blue> Node Web开发 = Node Web development</a></td>
+
+				  <td>(美)David Herron著&nbsp;</td>
+				  <td>人民邮电出版社&nbsp;</td>
+				  <td>978-7-115-27832-6&nbsp;</td>
+				  <td>2012&nbsp;</td>	  
+				  
+			  </tr>
+
+			  <tr >			    
+				  <td align=center>3&nbsp;</td>
+				  <!--20091207屏蔽索书号-->
+				  <!--<td><a href="javascript:popup('detailBook.jsp','01h0160059')" class=opac_blue> B84/3008</a></td>-->
+				  <td><a href="javascript:popup('detailBook.jsp','01h0160059')" class=opac_blue> 拖延心理学 = No delaying!</a></td>
+
+				  <td>李立编著&nbsp;</td>
+				  <td>中国戏剧出版社&nbsp;</td>
+				  <td>978-7-104-03482-7&nbsp;</td>
+				  <td>2011&nbsp;</td>	  
+				  
+			  </tr>
+
+			  <tr bgcolor=#EBF0F2>			    
+				  <td align=center>4&nbsp;</td>
+				  <!--20091207屏蔽索书号-->
+				  <!--<td><a href="javascript:popup('detailBook.jsp','01h0145360')" class=opac_blue> N19/3000</a></td>-->
+				  <td><a href="javascript:popup('detailBook.jsp','01h0145360')" class=opac_blue> 贪玩的人类 : 那些将我们带进科学的人 = = No desire, no science</a></td>
+
+				  <td>老多著&nbsp;</td>
+				  <td>科学出版社&nbsp;</td>
+				  <td>978-7-03-027134-1&nbsp;</td>
+				  <td>2010&nbsp;</td>	  
+				  
+			  </tr>
+
+</table>
+
+</form>
+
+
+	<table border=0 cellPadding=0 cellSpacing=0 width="97%">
+			  <tr><td colspan="3" height="1" background="../images/doc_01.gif"></td></tr>
+
+			<tr>
+			    <td height="22" valign="baseline" align="right" class="opac_blue" nowrap width="60%">
+				   <form method="POST" action="search.jsp" name=form1 onsubmit="javascript:return newSearch(this);">
+				   <input type=hidden value=simple name=kind>
+				   检索词类型<select name="type" style="width: 75">
+<option value='title'>所有题名</option>
+<option value='author'>著/作者</option>
+<option value='number'>标准号(ISBN或ISSN)</option>
+<option value='subject_term'>主题词</option>
+<option value='publish_year'>出版年</option>
+<option value='publisher'>出版社</option>
+<option value='call_no'>分类号</option>
+<option value='title_pinyi'>题名缩拼</option>
+<option value='book_barcode'>图书条码</option>
+			   </select>&nbsp;
+				   检索词<input type="text" name="word" class=input_text >&nbsp;
+				   匹配方式<select name="match" style="width: 75">
+<option value='qx'>前向匹配</option>
+<option value='mh'>模糊匹配</option>
+<option value='jq'>精确匹配</option>
+			   </select>&nbsp;</td>
+
+			    <td class=opac_blue align="center" valign="baseline" nowrap >
+				</td>
+<input type="hidden" name="recordtype" value="all"> 
+<td valign="baseline" nowrap>
+<select name=searchtimes style=width: 85>
+						<option value="1">简单检索</option>
+							<option value="2" selected>结果中检索</option>
+							</select>
+				<input type="image" src="../images/search.gif">	   
+          <input type="hidden" name="library_id" value="all">     
+			    </form>
+	
+	        </td></tr>
+	        <tr><td colspan="3" height="1" background="../images/doc_01.gif"></td></tr>
+		    </table>
+
+			  
