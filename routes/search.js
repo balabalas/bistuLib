@@ -9,7 +9,7 @@ function parseArg(args){
     var res = {}
       , key = args.key || ''
       , match = args.match || 'qx';
-    
+      
     /*
      * query params should like this:
      *   search?key=node&match=qx&p=all
@@ -23,6 +23,7 @@ function parseArg(args){
 exports.query = function(req, res){
   
   var params = req.query
+    , ip = req.ip
     , args = null;
   
   var handleAction = function(results){
@@ -33,8 +34,10 @@ exports.query = function(req, res){
       else {
         data = results;
       }
-      res.send(data);
-      res.end();
+      res.set('Content-Type', 'text/plain;charset=utf-8');
+      //res.set('Content-Length', data.length);
+      res.end(data);
+      //res.end();
   };
   
   if(!params){
