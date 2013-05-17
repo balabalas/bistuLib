@@ -8,8 +8,9 @@ var params = 'recordtype=all&library_id=all&kind=simple&word=node&cmatch=qx&sear
 var http = require('http')
     , fs = require('fs')
     , jsdom = require('jsdom')
-    //, Iconv = require('iconv').Iconv
+    // , Iconv = require('iconv').Iconv
     , iconv = require('iconv-lite')
+    // , encoding = require('encoding')
     , jquery = fs.readFileSync('../lib/jquery.js').toString()
     , options = {
         hostname:'211.68.37.131'
@@ -18,7 +19,18 @@ var http = require('http')
         , method: 'GET'
         , header: {"charset":"GBK"}
     };
+  // java%D3%EF%D1%D4        java语言
+  // var s = encoding.convert(('java语言'), 'gbk', 'utf8');
+  // var iconvs = iconv.toEncoding('java语言', 'gbk');
+  // var iv = new Iconv('utf-8', 'gbk');
+  // console.log(iv.convert('java语言'));
+  // console.log(iconvs);
+  // console.log(encodeURI(iv.convert('java语言')));
 
+  // console.log(encodeURI(iconv.fromEncoding(iconvs, 'utf8')));
+
+  // console.log('ENCODE: ' + encodeURI(iconv.decode(s, 'gbk')));
+  // console.log(encodeURI(iconv.decode('java语言', 'gbk')));
 //var iconv = new Iconv('GBK', 'UTF-8');
 
 var req = http.request(options, function(res){
