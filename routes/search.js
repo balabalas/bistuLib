@@ -34,8 +34,9 @@ exports.query = function(req, res){
       else {
         data = results;
       }
+      console.log(Buffer.byteLength(data, 'utf-8'));
       res.set('Content-Type', 'text/plain;charset=utf-8');
-      //res.set('Content-Length', data.length);
+      res.set('Content-Length', Buffer.byteLength(data, 'utf-8'));
       res.end(data);
       //res.end();
   };
