@@ -6,43 +6,49 @@
 var search = require('../lib/search');
 
 function parseArg(args){
-    var res = {}
-      , key = args.key || ''
-      , match = args.match || 'qx';
+    var result = {};
+    var key = args.key || ''
+    var match = args.match || 'qx';
       
     /*
      * query params should like this:
      *   search?key=node&match=qx&p=all
      * **/
-    res.word = key;
-    res.match = match;
+    result.word = key;
+    result.match = match;
     
-    return res;
+    return result;
 }
 
 exports.query = function(req, res){
   
-  var params = req.query
-    , ip = req.ip
-    , args = null;
+  var params = req.query;
+  var ip = req.ip;
+  var args = null;
   
   var handleAction = function(results){
+
       var data = null;
-      if(typeof results === 'object'){
+
+      if(results && typeof results === 'object'){
         data = JSON.stringify(results);
       }
-      else {
+      else if(results) {
         data = results;
       }
-      console.log(Buffer.byteLength(data, 'utf-8'));
-      res.set('Content-Type', 'text/plain;charset=utf-8');
-      res.set('Content-Length', Buffer.byteLength(data, 'utf-8'));
+      // console.log(Buffer.byteLength(data, 'utf-8'));
+      // console.log(data.length);
+      res.set({
+        'Content-Type': 'text/plain;charset=utf-8',
+        'Content-Length': Buffer.byteLength(data, 'utf-8')
+      });
+
       res.end(data);
-      //res.end();
+      // res.end();
   };
   
   if(!params){
-      res.send('null');
+      args = null;
   }
   else {
       args = parseArg(params);
