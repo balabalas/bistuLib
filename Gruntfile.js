@@ -19,14 +19,24 @@ module.exports = function(grunt) {
                     }
                 }
             }
+        },
+        blanket: {
+            options: {
+                debug: true
+            },
+            files: {
+                'test/cov/': ['lib/']
+            }
         }
         
     });
 
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-blanket');
     
     grunt.registerTask('hint', ['jshint:lib']);
-    grunt.registerTask('default', ['jshint']);
+    grunt.registerTask('conv', ['blanket']);
+    grunt.registerTask('default', ['jshint', 'blanket']);
 
 };
 

@@ -7,7 +7,7 @@ var search = require('../lib/search');
 
 function parseArg(args){
     var result = {};
-    var key = args.key || ''
+    var key = args.key || '';
     var match = args.match || 'qx';
       
     /*
